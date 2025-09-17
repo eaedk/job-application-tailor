@@ -1,0 +1,5 @@
+{
+  "name": "(working v0) Job Application Tailor",
+  "description": "An AI-powered assistant to tailor your job applications. Upload your resume and a job description to generate a custom resume, a personalized cover letter, and targeted interview preparation tips. All processing is done in your browser to ensure your privacy.",
+  "requestFramePermissions": []
+}

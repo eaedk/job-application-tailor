@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Tailor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Custom styles for rendering generated content */
+      .content-display > p:empty::before {
+        content: " ";
+        white-space: pre;
+      }
+      .content-display a {
+        color: #3b82f6; /* Tailwind's blue-500 */
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .dark .content-display a {
+        color: #60a5fa; /* Tailwind's blue-400 for better contrast */
+      }
+
+      /* Improved typography for Cover Letters and Interview Tips */
+      .content-display p {
+        line-height: 1.65;
+        margin-bottom: 1.1em;
+      }
+      .content-display h3 {
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-top: 1.5em;
+        margin-bottom: 0.75em;
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #e2e8f0; /* slate-200 */
+      }
+      .dark .content-display h3 {
+        border-bottom-color: #475569; /* slate-600 */
+      }
+      .content-display ul, .content-display ol {
+        list-style-position: outside; /* 'outside' looks more professional */
+        padding-left: 1.5rem;
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+      }
+      .content-display ul {
+        list-style-type: disc;
+      }
+      .content-display ol {
+        list-style-type: decimal;
+      }
+      .content-display li {
+        margin-bottom: 0.5em; /* Increased spacing for readability */
+        padding-left: 0.25rem;
+      }
+    </style>
+
+    <!-- jsPDF dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- PDF and DOCX parsing libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.7.0/mammoth.browser.min.js"></script>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50 dark:bg-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
